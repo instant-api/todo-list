@@ -19,9 +19,10 @@ export async function command() {
     '-p': '--port',
   });
 
+  const readmePath = path.resolve(__dirname, '..', 'README.md');
+  const info = await fse.readFile(readmePath, { encoding: 'utf8' });
+
   if (args['--help']) {
-    const readmePath = path.resolve(__dirname, '..', 'README.md');
-    const info = await fse.readFile(readmePath, { encoding: 'utf8' });
     console.log(info);
     return;
   }
@@ -68,7 +69,7 @@ export async function command() {
     }
   }
 
-  const server = createServer(filePath);
+  const server = createServer(filePath, info);
 
   server.listen(usedPort, () => {
     console.log(`Server started on http://localhost:${usedPort}`);

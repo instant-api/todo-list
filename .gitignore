@@ -2,3 +2,5 @@
 .DS_Store
 node_modules
 dist
+
+todo--list-db.json

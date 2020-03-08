@@ -56,7 +56,10 @@ const updateTodoValidator = YupValidator(
   })
 );
 
-export function createServer(filePath: string): TumauServer {
+export function createServer(
+  filePath: string,
+  helpContent: string
+): TumauServer {
   const server = TumauServer.create({
     handleErrors: false,
     mainMiddleware: Middleware.compose(
@@ -65,7 +68,7 @@ export function createServer(filePath: string): TumauServer {
       InvalidResponseToHttpError,
       RouterPackage([
         Route.GET(ROUTES.home, () => {
-          return TumauResponse.withText(`Hello !`);
+          return TumauResponse.withText(helpContent);
         }),
         Route.GET(ROUTES.todos, async _tools => {
           const data = await read(filePath);
