@@ -27,7 +27,7 @@ export async function command() {
     return;
   }
 
-  const port = args['--port'];
+  const port = args['--port'] || 3001;
   const file = args['--file'] || args._[0] || DEFAULT_FILE_NAME;
 
   if (file.endsWith('.json') === false) {
