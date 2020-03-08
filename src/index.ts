@@ -20,10 +20,10 @@ export async function command() {
   });
 
   const readmePath = path.resolve(__dirname, '..', 'README.md');
-  const info = await fse.readFile(readmePath, { encoding: 'utf8' });
+  const help = await fse.readFile(readmePath, { encoding: 'utf8' });
 
   if (args['--help']) {
-    console.log(info);
+    console.log(help);
     return;
   }
 
@@ -69,7 +69,10 @@ export async function command() {
     }
   }
 
-  const server = createServer(filePath, info);
+  const apiPath = path.resolve(__dirname, '..', 'api.html');
+  const apiContent = await fse.readFile(apiPath, { encoding: 'utf8' });
+
+  const server = createServer(filePath, apiContent);
 
   server.listen(usedPort, () => {
     console.log(`Server started on http://localhost:${usedPort}`);

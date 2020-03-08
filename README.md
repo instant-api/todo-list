@@ -9,6 +9,10 @@ It uses a single JSON file to store data.
 
 The aim of this package is to provide an API for front-end exercices, allowing student to use an API without having to set on up themself.
 
+## Who made this ?
+
+Hi ! I'm Etienne, you can [follow me on Twitter](https://twitter.com/Etienne_dot_js) 😉
+
 ## Usage
 
 ```bash

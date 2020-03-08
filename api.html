@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instant Todo List API</title>
+  </head>
+  <body>
+    <pre style="line-height: 1.5">
+<h3 style="margin: 0" >Instant Todo List API</h3>
+<b>GET <a href="/">/</a></b>
+- Return this page
+
+<b>GET <a href="/todos">/todos</a></b>
+- Return an array of all the todos [{ id: "", name: "", done: false }, {...}, ...] 
+
+<b>POST <a href="/todo">/todo</a></b>
+Create a Todo
+- Body { name: "", done: true } or { name: "" }
+- Return the created Todo { id: "", name: "", done: false }
+
+<b>PUT <a href="/todo/qr0u1q1">/todo/[id]</a></b>
+Update a Todo
+- Body { name: "", done: false } (both properties are optional)
+- Return the updated todo
+    </pre>
+  </body>
+</html>

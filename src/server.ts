@@ -68,7 +68,7 @@ export function createServer(
       InvalidResponseToHttpError,
       RouterPackage([
         Route.GET(ROUTES.home, () => {
-          return TumauResponse.withText(helpContent);
+          return TumauResponse.withHtml(helpContent);
         }),
         Route.GET(ROUTES.todos, async _tools => {
           const data = await read(filePath);
