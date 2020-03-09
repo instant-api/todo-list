@@ -6,7 +6,7 @@ import path from 'path';
 import { write, DEFAULT_CONTENT } from './db';
 import { createServer } from './server';
 
-const DEFAULT_FILE_NAME = 'todo--list-db.json';
+const DEFAULT_FILE_NAME = 'todo-list-db.json';
 
 export async function command() {
   const args = arg({
