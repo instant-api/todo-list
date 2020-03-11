@@ -100,10 +100,10 @@ export function createServer(
               throw new HttpError.NotFound();
             }
             const updated = updateTodoValidator.getValue(tools);
-            if (updated.name) {
+            if (updated.name !== undefined) {
               todo.name = updated.name;
             }
-            if (updated.done) {
+            if (updated.done !== undefined) {
               todo.done = updated.done;
             }
             await write(filePath, data);
