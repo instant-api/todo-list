@@ -1,6 +1,6 @@
 {
   "name": "@instant-api/todo-list",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "> A CLI to create a small Todo List API",
   "homepage": "https://github.com/instant-api/todo-list#readme",
   "bugs": {
