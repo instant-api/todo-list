@@ -46,8 +46,8 @@
     "cuid": "^2.1.8",
     "fs-extra": "^8.1.0",
     "get-port": "^5.1.1",
-    "inquirer": "^7.0.6",
-    "tumau": "^1.0.0-alpha.71",
+    "inquirer": "^7.1.0",
+    "tumau": "^1.0.0-alpha.73",
     "yup": "^0.28.3"
   },
   "devDependencies": {
