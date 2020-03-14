@@ -992,77 +992,83 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tumau/compress@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/compress/-/compress-1.0.0-alpha.73.tgz#052d7c0d94a2651edaa5a4b7dde4d481a614d5f2"
-  integrity sha512-Uh1iLxbzMDpGbq0wYIOBndwxF5ss/h5DCEJI9/mhpIU/lrE+AL+nBSRTJTXbwK6aYLcNsXk0DYB2iBV7pmKf2g==
+"@tumau/compress@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/compress/-/compress-1.0.0-alpha.74.tgz#512db0409c24c63031166ccb719ef4644b83de7e"
+  integrity sha512-TFfV1aZHoZnWDuphXi37u1NV6gQgqorhCX1atXPxnjRZDivOsNv3GoOjbPo8IOdnGlzktjbpp7fKHvKdxY3diA==
   dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
+    "@tumau/core" "^1.0.0-alpha.74"
 
-"@tumau/cookie@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/cookie/-/cookie-1.0.0-alpha.73.tgz#36b925686ccc4f44c8b83b5e5088d24a0b7e4523"
-  integrity sha512-wSV7A9o3ANbCOpjIDxdwZVgsTUpLJRW0RZmNxn6Ooq+g4ZJxQsfgq6hQTZBSJJ8tGswsUEbETi5ZHUzAXxyV1g==
-  dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
+"@tumau/content-type@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/content-type/-/content-type-1.0.0-alpha.74.tgz#7721f65405c5d57a94bdee8ce838f0494dda066b"
+  integrity sha512-N/gimCkvKp3asZSpREtfKu6BlkKhS1zIwY7JpPZInt7DQVFT1WxumaUJrqd7wU6Tp2WZ1C2GozdYyjxp2bWH2A==
 
-"@tumau/core@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/core/-/core-1.0.0-alpha.73.tgz#ca1320d07aee78dfe8c293b59009d336f1c5fc31"
-  integrity sha512-+JwWJY3A1/p7GI0suLTOcSXLSUV3O07XKg9HO2Sd6eE96xfp+NBdnGgPvsbpOWuFGMzJswPZTYM9JIrJMwZKtA==
+"@tumau/cookie@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/cookie/-/cookie-1.0.0-alpha.74.tgz#474c8c64544111e78774ef60c91d2e56fcfa5b28"
+  integrity sha512-+Kt+u/9m64p3/YKwUmIW6tTaqpqRwDNG4w2ciHdBUhSBwdQoXCtgC2leDY/CNHRfmKg2ab+ogQMOIkyzDimZbA==
   dependencies:
+    "@tumau/core" "^1.0.0-alpha.74"
+
+"@tumau/core@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/core/-/core-1.0.0-alpha.74.tgz#8954e6fc2314c58ac0927b546d57ec891cfb3f34"
+  integrity sha512-mKyawp0bbFzREOG4fm1ifQCjKlQFJ5H640XDi4oYlDQyZ6H4QkUkjH0HfICXkxY0P2rnE1ybnfVEpjVCaorzQQ==
+  dependencies:
+    "@tumau/content-type" "^1.0.0-alpha.74"
     miid "^1.1.2"
 
-"@tumau/cors@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/cors/-/cors-1.0.0-alpha.73.tgz#6d4b430e3309df19f75221533ba9749097c16ec6"
-  integrity sha512-cO8AuC4g6Ef4axyNno8gqQRpQImk9/10l7B6GSA26l+WktXtM+wIiF6gnxkykAISzYulPU2dq3z6k4+Ci+qKmA==
+"@tumau/cors@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/cors/-/cors-1.0.0-alpha.74.tgz#54c91eb0bf662a1cce0d5c7331f726b5b96928f5"
+  integrity sha512-B2+tWzCHqwRh6Q3uI41zHSGOjEdZuB9y7pqEdSlxoFb67vWhRUgLS9vXsVFRT+vw4AE945twouSBroCGBMVqDg==
   dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
+    "@tumau/core" "^1.0.0-alpha.74"
 
-"@tumau/json@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/json/-/json-1.0.0-alpha.73.tgz#9c6de6ea0ee034ecc4fe4f6554ac6950c677ea08"
-  integrity sha512-F0eAHgs6nhfU8P9bmerJzNPwSJAPJ4jpsaYHip7L0+j0NiKFTL4JPbVnq8pG214pxW2hNXNEP8YLkXcu5mkwXw==
+"@tumau/json@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/json/-/json-1.0.0-alpha.74.tgz#a7cfbeb13f15b9b7ece9538b84cca953db0e3d3c"
+  integrity sha512-bIeqds8x0GoJ2Wrpl5mdG7ppLfJgn7o9NvT55uAy2ZFIRrqSlX/aPZtn6ggHwivF+Jw6SFjO3RK/wzzdh1Orcg==
   dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
+    "@tumau/core" "^1.0.0-alpha.74"
 
-"@tumau/rate-limit@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/rate-limit/-/rate-limit-1.0.0-alpha.73.tgz#b4511f75288fb12826426e1785f938dd1b2ead44"
-  integrity sha512-ngTCzLv3Qrp3UsjiBPGbIfaQb1FHdk3zEmLdNirB5jc4SzHwYq9brr8ouVFfNGjewUfbEPsXdW2GlI5bLMyGZQ==
+"@tumau/rate-limit@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/rate-limit/-/rate-limit-1.0.0-alpha.74.tgz#fabf8681c413593fd65571e54ff828ded4327ad7"
+  integrity sha512-L3xEt1UWVHMn/zjMXYjC25r63YK/AQV0/oHFbBUCbhO66B4i9WjmMXOCy/2uEHl6ia+IEHI98U352j2zXXzLJg==
   dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
+    "@tumau/core" "^1.0.0-alpha.74"
 
-"@tumau/router@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/router/-/router-1.0.0-alpha.73.tgz#5826690d2ce4482890a70915899a68aca8534f21"
-  integrity sha512-QNMODgOiojWy0Ci82NgOuQaqqp0ugdDSC9L4zOidHQ3YLBosIK37PIxYjZXBTiealegBawWKkI0olraIu72RSg==
+"@tumau/router@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/router/-/router-1.0.0-alpha.74.tgz#ca0adcb81cc3e2f97a67be0ecc0fb29da9f25ca2"
+  integrity sha512-j4D8tGXvMcfCCT+YxG06aaqvBdopG161fJIiKewThBN39ApRAa0R+nFl4FTLuTped0zXnt/ScU3pK35NhqVuOg==
   dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
-    "@tumau/url-parser" "^1.0.0-alpha.73"
+    "@tumau/core" "^1.0.0-alpha.74"
+    "@tumau/url-parser" "^1.0.0-alpha.74"
     chemin "^5.0.0"
 
-"@tumau/static@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/static/-/static-1.0.0-alpha.73.tgz#ae2b0a98a5e06fa2d6763a7ed468452c1567b837"
-  integrity sha512-iqRyoQEa2OuXd9xzlPOcIkXRaSzrYQitT7lK2+8Y2oBjPkhtVzZl0w1cLMD9LJJbyxQsE8Zsc2wvNj+NjxY0nw==
+"@tumau/static@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/static/-/static-1.0.0-alpha.74.tgz#5374ea6a21ccd1e36ddfae514a1cba182ce95d58"
+  integrity sha512-yEySNovl9BISf+BpUov4X6l0TNeA6gq/3ZhAzNg0FCmVJMdNFJR+R0qwMkBVuc9FO1+dU9BBNN40SjynSKLRUw==
   dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
+    "@tumau/core" "^1.0.0-alpha.74"
 
-"@tumau/url-parser@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/url-parser/-/url-parser-1.0.0-alpha.73.tgz#ca5faf3442ecf412aa454566d3dead9a01eb179b"
-  integrity sha512-k/BodMjqny7APfQq79yNr+jX4LWoy2MuY4FqwtXnPbeyROJCyFIqeGGRkt79bFuAc6tzFP22Oig+vT7ctcPLaQ==
+"@tumau/url-parser@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/url-parser/-/url-parser-1.0.0-alpha.74.tgz#d90851cd521c62026b2fd39f4bb9a2ddfa6983d4"
+  integrity sha512-cDP1Hqn3QoLALNoKvpW+wiqE4uuiv/5/iT9Nng+Yl3EJOHGHlj2Vr4LCcBl+hLuFvbV/rHWYyiwInwFD06JiGg==
   dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
+    "@tumau/core" "^1.0.0-alpha.74"
 
-"@tumau/ws@^1.0.0-alpha.73":
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/@tumau/ws/-/ws-1.0.0-alpha.73.tgz#00df5b734f29471a0d5452ac0d6d48cef8dd7068"
-  integrity sha512-Ksalx1vLXWPURlzIkp/WgQkrMQA6RC0bXRuy/iRLIxJQApk0keXViyMQi8BLOd5c6kSP6sstjwJ01ll82NhEZg==
+"@tumau/ws@^1.0.0-alpha.74":
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@tumau/ws/-/ws-1.0.0-alpha.74.tgz#008c39ab15eb78cedf532a018531df20971f69b6"
+  integrity sha512-CgMmkJJfE32ldqcD3WBCAhcEh+k2tHiIqFS7AZHF3QnAB2yfuA2eOVw+TWmouD3tU+W5PCVie0Ii2LO9BrWteA==
   dependencies:
-    "@tumau/core" "^1.0.0-alpha.73"
+    "@tumau/core" "^1.0.0-alpha.74"
     "@types/ws" "^7.2.2"
 
 "@types/babel__core@^7.1.0":
@@ -6905,21 +6911,21 @@ tsutils@^3.17.1:
   dependencies:
     tslib "^1.8.1"
 
-tumau@^1.0.0-alpha.73:
-  version "1.0.0-alpha.73"
-  resolved "https://registry.yarnpkg.com/tumau/-/tumau-1.0.0-alpha.73.tgz#9d3a7958b342634e6b7e007d45ad946ab7ab698f"
-  integrity sha512-Bz4BRtTnBxBTMn9xRbfPDfpsLJhfnwinUQFdOUtxyW0FMXMFi12vxmsZrhzq+l5nkBMV8k6jOO4olu1LWHDHfA==
+tumau@^1.0.0-alpha.74:
+  version "1.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/tumau/-/tumau-1.0.0-alpha.74.tgz#cc0ce1c0a1cc733d7ce6ac72cd9436f47bbd4788"
+  integrity sha512-ip8DixrgN8nehnZoxC5y6Z5ItVP4+KN3KyVjTNGKRgtv6IK/+onbXlrHlaWDRrsjs7W3qqrBvKEfq2eTzS/4cg==
   dependencies:
-    "@tumau/compress" "^1.0.0-alpha.73"
-    "@tumau/cookie" "^1.0.0-alpha.73"
-    "@tumau/core" "^1.0.0-alpha.73"
-    "@tumau/cors" "^1.0.0-alpha.73"
-    "@tumau/json" "^1.0.0-alpha.73"
-    "@tumau/rate-limit" "^1.0.0-alpha.73"
-    "@tumau/router" "^1.0.0-alpha.73"
-    "@tumau/static" "^1.0.0-alpha.73"
-    "@tumau/url-parser" "^1.0.0-alpha.73"
-    "@tumau/ws" "^1.0.0-alpha.73"
+    "@tumau/compress" "^1.0.0-alpha.74"
+    "@tumau/cookie" "^1.0.0-alpha.74"
+    "@tumau/core" "^1.0.0-alpha.74"
+    "@tumau/cors" "^1.0.0-alpha.74"
+    "@tumau/json" "^1.0.0-alpha.74"
+    "@tumau/rate-limit" "^1.0.0-alpha.74"
+    "@tumau/router" "^1.0.0-alpha.74"
+    "@tumau/static" "^1.0.0-alpha.74"
+    "@tumau/url-parser" "^1.0.0-alpha.74"
+    "@tumau/ws" "^1.0.0-alpha.74"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
