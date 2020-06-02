@@ -14,9 +14,9 @@ import {
   RouterConsumer,
 } from 'tumau';
 import { read, Todo, write } from './db';
-import { YupValidator } from './YupValidator';
-import * as Yup from 'yup';
+import { RuntypesValidator } from './RuntypesValidator';
 import cuid from 'cuid';
+import * as RT from 'runtypes';
 
 export function CuidSlugParam<N extends string>(
   name: N
@@ -42,17 +42,20 @@ const ROUTES = {
   todoById: Chemin.create('todo', CuidSlugParam('id')),
 };
 
-const newTodoValidator = YupValidator(
-  Yup.object().shape({
-    name: Yup.string().required(),
-    done: Yup.bool(),
-  })
+const newTodoValidator = RuntypesValidator(
+  RT.Record({
+    name: RT.String,
+  }).And(
+    RT.Partial({
+      done: RT.Boolean,
+    })
+  )
 );
 
-const updateTodoValidator = YupValidator(
-  Yup.object().shape({
-    name: Yup.string(),
-    done: Yup.bool(),
+const updateTodoValidator = RuntypesValidator(
+  RT.Partial({
+    name: RT.String,
+    done: RT.Boolean,
   })
 );
 
