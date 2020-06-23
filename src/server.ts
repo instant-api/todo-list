@@ -14,9 +14,9 @@ import {
   RouterConsumer,
 } from 'tumau';
 import { read, Todo, write } from './db';
-import { RuntypesValidator } from './RuntypesValidator';
+import { ZodValidator } from './ZodValidator';
 import cuid from 'cuid';
-import * as RT from 'runtypes';
+import * as z from 'zod';
 
 export function CuidSlugParam<N extends string>(
   name: N
@@ -42,20 +42,17 @@ const ROUTES = {
   todoById: Chemin.create('todo', CuidSlugParam('id')),
 };
 
-const newTodoValidator = RuntypesValidator(
-  RT.Record({
-    name: RT.String,
-  }).And(
-    RT.Partial({
-      done: RT.Boolean,
-    })
-  )
+const newTodoValidator = ZodValidator(
+  z.object({
+    name: z.string(),
+    done: z.boolean().optional(),
+  })
 );
 
-const updateTodoValidator = RuntypesValidator(
-  RT.Partial({
-    name: RT.String,
-    done: RT.Boolean,
+const updateTodoValidator = ZodValidator(
+  z.object({
+    name: z.string().optional(),
+    done: z.boolean().optional(),
   })
 );
 
