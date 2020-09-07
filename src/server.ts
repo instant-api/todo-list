@@ -92,7 +92,7 @@ export function createServer(
           updateTodoValidator.validate,
           async tools => {
             const id = tools
-              .readContextOrFail(RouterConsumer)
+              .getOrFail(RouterConsumer)
               .getOrFail(ROUTES.todoById).id;
             const data = await read(filePath);
             const todo = data.todos.find(t => t.id === id);
@@ -111,9 +111,8 @@ export function createServer(
           }
         ),
         Route.DELETE(ROUTES.todoById, async tools => {
-          const id = tools
-            .readContextOrFail(RouterConsumer)
-            .getOrFail(ROUTES.todoById).id;
+          const id = tools.getOrFail(RouterConsumer).getOrFail(ROUTES.todoById)
+            .id;
           const data = await read(filePath);
           const todoIndex = data.todos.findIndex(t => t.id === id);
           if (todoIndex === -1) {
