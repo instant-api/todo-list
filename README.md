@@ -33,5 +33,5 @@ npx @instant-api/todo-list --port 9000 --file todo.json
 If you provide an argument with no name is will be used as the `file argument`
 
 ```bash
-npx @instant-api/todo-list --file todo.json
+npx @instant-api/todo-list todo.json
 ```
