@@ -7,7 +7,7 @@ It uses a single JSON file to store data.
 
 ## Why ?
 
-The aim of this package is to provide an API for front-end exercices, allowing student to use an API without having to set on up themself.
+The aim of this package is to provide an API for front-end exercices, allowing student to use an API without having to setup one themself.
 
 ## Who made this ?
 
