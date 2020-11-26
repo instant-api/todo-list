@@ -30,7 +30,7 @@
     "pub": "tsdx build && np",
     "start": "tsdx watch",
     "test": "tsdx test --passWithNoTests",
-    "run": "npx @instant-api/todo-list -p ."
+    "run": "npx -p . todo-list"
   },
   "husky": {
     "hooks": {
@@ -44,25 +44,25 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "arg": "^4.1.3",
+    "arg": "^5.0.0",
     "cuid": "^2.1.8",
     "fs-extra": "^9.0.1",
     "get-port": "^5.1.1",
     "inquirer": "^7.3.3",
     "runtypes": "^5.0.1",
-    "tumau": "^1.0.0-alpha.80",
-    "zod": "^1.11.5"
+    "tumau": "^1.0.0-alpha.84",
+    "zod": "^1.11.10"
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.1",
+    "@types/fs-extra": "^9.0.4",
     "@types/inquirer": "^7.3.1",
-    "@types/jest": "^26.0.13",
-    "@types/yup": "^0.29.6",
-    "husky": "^4.2.5",
-    "np": "^6.5.0",
-    "tsdx": "^0.13.3",
-    "tslib": "^2.0.1",
-    "typescript": "^3.9.7"
+    "@types/jest": "^26.0.15",
+    "@types/yup": "^0.29.9",
+    "husky": "^4.3.0",
+    "np": "^7.0.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.2"
   },
   "peerDependencies": {},
   "engines": {

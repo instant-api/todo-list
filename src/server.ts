@@ -1,8 +1,8 @@
 import {
-  TumauServer,
+  createServer as createTumauServer,
+  compose,
   Chemin,
   CheminParam,
-  Middleware,
   RouterPackage,
   Route,
   TumauResponse,
@@ -12,6 +12,7 @@ import {
   JsonPackage,
   CorsPackage,
   RouterConsumer,
+  TumauServer,
 } from 'tumau';
 import { read, Todo, write } from './db';
 import { ZodValidator } from './ZodValidator';
@@ -60,9 +61,9 @@ export function createServer(
   filePath: string,
   helpContent: string
 ): TumauServer {
-  const server = TumauServer.create({
+  const server = createTumauServer({
     handleErrors: false,
-    mainMiddleware: Middleware.compose(
+    mainMiddleware: compose(
       CorsPackage(),
       JsonPackage(),
       InvalidResponseToHttpError,
