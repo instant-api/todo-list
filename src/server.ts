@@ -9,10 +9,13 @@ import {
   JsonResponse,
   HttpError,
   InvalidResponseToHttpError,
-  JsonPackage,
   CorsPackage,
   RouterConsumer,
   TumauServer,
+  JsonParser,
+  HttpErrorToJson,
+  ErrorToHttpError,
+  Middleware,
 } from 'tumau';
 import { read, Todo, write } from './db';
 import { ZodValidator } from './ZodValidator';
@@ -59,14 +62,26 @@ const updateTodoValidator = ZodValidator(
 
 export function createServer(
   filePath: string,
-  helpContent: string
+  helpContent: string,
+  slowMode: boolean
 ): TumauServer {
+  const WaitMiddleware: Middleware = async (ctx, next) => {
+    if (slowMode) {
+      await waitRandom(1000, 2000);
+      return next(ctx);
+    }
+    return next(ctx);
+  };
+
   const server = createTumauServer({
     handleErrors: false,
     mainMiddleware: compose(
       CorsPackage(),
-      JsonPackage(),
+      HttpErrorToJson,
+      ErrorToHttpError,
       InvalidResponseToHttpError,
+      JsonParser(),
+      WaitMiddleware,
       RouterPackage([
         Route.GET(ROUTES.home, () => {
           return TumauResponse.withHtml(helpContent);
@@ -131,4 +146,13 @@ export function createServer(
   });
 
   return server;
+}
+
+function wait(duration: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, duration));
+}
+
+function waitRandom(min: number, max: number) {
+  const duration = min + Math.floor(Math.random() * (max - min));
+  return wait(duration);
 }

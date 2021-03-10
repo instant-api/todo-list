@@ -12,10 +12,12 @@ export async function command() {
   const args = arg({
     '--file': String,
     '--port': Number,
+    '--slow': Boolean,
     '--help': Boolean,
     // alias
     '-h': '--help',
     '-f': '--file',
+    '-s': '--slow',
     '-p': '--port',
   });
 
@@ -29,6 +31,7 @@ export async function command() {
 
   const port = args['--port'] || 3001;
   const file = args['--file'] || args._[0] || DEFAULT_FILE_NAME;
+  const slowMode = args['--slow'] || false;
 
   if (file.endsWith('.json') === false) {
     throw new Error(`File must end with .json !`);
@@ -72,7 +75,7 @@ export async function command() {
   const apiPath = path.resolve(__dirname, '..', 'api.html');
   const apiContent = await fse.readFile(apiPath, { encoding: 'utf8' });
 
-  const server = createServer(filePath, apiContent);
+  const server = createServer(filePath, apiContent, slowMode);
 
   server.listen(usedPort, () => {
     console.log(`Server started on http://localhost:${usedPort}`);

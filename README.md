@@ -23,6 +23,8 @@ npx @instant-api/todo-list
 
 - `--port` or `-p`: The port to use
 - `--file` or `-f`: The path to the json file used to store data.
+- `--help` or `-h`: The path to the json file used to store data.
+- `--slow` or `-s`: Add a random delay to every request
 
 **Note**: By default the `file` is set to `todo-list-db.json`.
 
