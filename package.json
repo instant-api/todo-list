@@ -31,7 +31,8 @@
     "start": "tsdx watch",
     "test": "tsdx test --passWithNoTests",
     "run": "npx -p . todo-list",
-    "run:slow": "npx -p . todo-list --slow"
+    "run:slow": "npx -p . todo-list --slow",
+    "test-whoami": "npm whoami"
   },
   "prettier": {
     "printWidth": 80,
@@ -62,6 +63,6 @@
     "node": ">=10"
   },
   "np": {
-    "yarn": true
+    "yarn": false
   }
 }
