@@ -27,7 +27,7 @@
   "scripts": {
     "build": "tsdx build",
     "lint": "tsdx lint src",
-    "pub": "tsdx build && np",
+    "pub": "tsdx build && npx np",
     "start": "tsdx watch",
     "test": "tsdx test --passWithNoTests",
     "run": "npx -p . todo-list",
