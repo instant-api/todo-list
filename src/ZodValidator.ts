@@ -8,7 +8,7 @@ import {
 } from 'tumau';
 
 export function ZodValidator<T>(schema: z.Schema<T>) {
-  const Ctx = createContext<T>();
+  const Ctx = createContext<T>({ name: 'ZodValidator' });
 
   const validate: Middleware = async (ctx, next) => {
     const jsonBody = ctx.getOrFail(JsonParserConsumer);

@@ -45,14 +45,13 @@
     "fs-extra": "^9.1.0",
     "get-port": "^5.1.1",
     "inquirer": "^8.0.0",
-    "runtypes": "^5.0.1",
-    "tumau": "^1.0.0-alpha.84",
-    "zod": "^1.11.11"
+    "tumau": "1.0.0-alpha.85",
+    "zod": "^1.11.13"
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.8",
+    "@types/fs-extra": "^9.0.9",
     "@types/inquirer": "^7.3.1",
-    "@types/jest": "^26.0.20",
+    "@types/jest": "^26.0.22",
     "np": "^7.4.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",

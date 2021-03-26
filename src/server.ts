@@ -9,11 +9,12 @@ import {
   JsonResponse,
   HttpError,
   InvalidResponseToHttpError,
-  CorsPackage,
   RouterConsumer,
   TumauServer,
   JsonParser,
-  HttpErrorToJson,
+  HttpErrorToJsonResponse,
+  CorsActual,
+  CorsPreflight,
   ErrorToHttpError,
   Middleware,
 } from 'tumau';
@@ -74,10 +75,10 @@ export function createServer(
   };
 
   const server = createTumauServer({
-    handleErrors: false,
     mainMiddleware: compose(
-      CorsPackage(),
-      HttpErrorToJson,
+      CorsPreflight(),
+      CorsActual(),
+      HttpErrorToJsonResponse,
       ErrorToHttpError,
       InvalidResponseToHttpError,
       JsonParser(),
