@@ -63,8 +63,5 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  },
-  "np": {
-    "yarn": false
   }
 }
