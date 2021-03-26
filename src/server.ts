@@ -17,6 +17,7 @@ import {
   CorsPreflight,
   ErrorToHttpError,
   Middleware,
+  StringBodyParser,
 } from 'tumau';
 import { read, Todo, write } from './db';
 import { ZodValidator } from './ZodValidator';
@@ -81,6 +82,7 @@ export function createServer(
       HttpErrorToJsonResponse,
       ErrorToHttpError,
       InvalidResponseToHttpError,
+      StringBodyParser(),
       JsonParser(),
       WaitMiddleware,
       RouterPackage([
