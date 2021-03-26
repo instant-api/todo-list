@@ -60,5 +60,8 @@
   "peerDependencies": {},
   "engines": {
     "node": ">=10"
+  },
+  "np": {
+    "yarn": true
   }
 }
