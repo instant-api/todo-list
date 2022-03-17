@@ -11,7 +11,7 @@ The aim of this package is to provide an API for front-end exercices, allowing s
 
 ## Who made this ?
 
-Hi ! I'm Etienne, you can [follow me on Twitter](https://twitter.com/Etienne_dot_js) 😉
+Hi ! I'm Etienne, you can [follow me on Twitter](https://dldc.dev/twitter) 😉
 
 ## Usage
 
